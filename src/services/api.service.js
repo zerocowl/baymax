@@ -34,8 +34,8 @@ module.exports = {
       {
         path: '/v1/',
         aliases: {
-          'GET gas': 'gas.list',
-          'POST nariz': 'nariz.inspiracao'
+          'GET proccess': 'proccess.list',
+          'POST nariz': 'nariz.respiracao'
         },
 
         bodyParsers: {

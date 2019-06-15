@@ -11,7 +11,7 @@ module.exports = {
             ar: arFiltrado
           });
           return gasCarbono;
-        } catch (error) {
+        } catch (err) {
           this.logger.error(err);
           throw err;
         }
@@ -21,7 +21,7 @@ module.exports = {
 
   methods: {
     filter(ar) {
-      return ar.replace(/[^a-z.]/g, ''); //deixa apenas as letras minusculas
+      return ar.replace(/[0-9]/g, ''); // deixa apenas as letras minusculas
     }
   }
 };

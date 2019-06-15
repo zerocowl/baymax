@@ -7,11 +7,11 @@ module.exports = {
         const { ar } = ctx.params;
         try {
           // eslint-disable-next-line no-undef
-          if (isAir(ar)) {
-            const gases = await ctx.call('laringe.transport', ar);
+          if (this.isAir(ar)) {
+            const gases = await ctx.call('laringe.clean', ar);
             return gases;
           }
-          return 'Não é do tipo AR';
+          return 'Isso não é AR';
         } catch (error) {
           this.logger.error(error);
           throw error;
@@ -22,10 +22,11 @@ module.exports = {
 
   methods: {
     isAir(content) {
-      if (!!content.includes('oxigenio') || !!content.includes('carbono')) {
-        return false;
+      console.log(content);
+      if (content.includes('oxigenio') || content.includes('carbono')) {
+        return true;
       }
-      return true;
+      return false;
     }
   }
 };

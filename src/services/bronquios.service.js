@@ -8,10 +8,11 @@ module.exports = {
         try {
           const results = pckAir.map(async el => {
             if (el === 'oxigenio') {
-              await ctx.call('pulmao.proccess', {
+              const res = await ctx.call('pulmao.proccess', {
                 type: el,
                 milliliters: 100 + Math.floor(Math.random() * 10000)
               });
+              return res;
             }
             return el;
           });

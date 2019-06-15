@@ -9,3 +9,6 @@ traqueia -> filtrar e aquecer => adiciona acentos compativeis
 bronquios -> levar o ar aos pulmões => loadballacing para os pulmões
 alveolos -> (troca de gases) => remove o carbono e salva o oxigenio
 pulmões -> salva o oxigenio no banco e removem do banco o carbono
+
+oxigenio
+carbono

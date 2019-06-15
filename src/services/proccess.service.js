@@ -1,5 +1,5 @@
 const Service = {
-  name: 'gas',
+  name: 'proccess',
 
   actions: {
     create(ctx) {

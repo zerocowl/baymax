@@ -5,13 +5,10 @@ module.exports = {
     proccess: {
       async handler(ctx) {
         try {
-          const results = pckAir.map(async el => {
-            await ctx.call('gas.save', ctx.params);           
-          });
-          return Promise.all(results);
+          await ctx.call('gas.save', ctx.params);
         } catch (error) {
-          this.logger.error(err);
-          throw err;
+          this.logger.error(error);
+          throw error;
         }
       }
     }

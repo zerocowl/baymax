@@ -1,5 +1,3 @@
-import { JoiValidator } from './libs/joi.validator';
-
 export default {
   namespace: 'baymax',
   transporter: 'TCP',
@@ -13,6 +11,5 @@ export default {
     }
   },
   metrics: true,
-  validation: true,
-  validator: new JoiValidator()
+  validation: true
 };

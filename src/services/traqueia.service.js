@@ -16,8 +16,8 @@ module.exports = {
           });
           return Promise.all(results);
         } catch (error) {
-          this.logger.error(err);
-          throw err;
+          this.logger.error(error);
+          throw error;
         }
       }
     }

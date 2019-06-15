@@ -6,14 +6,15 @@ module.exports = {
       async handler(ctx) {
         const { ar } = ctx.params;
         try {
+          // eslint-disable-next-line no-undef
           if (isAir(ar)) {
             const gases = await ctx.call('laringe.transport', ar);
             return gases;
           }
           return 'Não é do tipo AR';
         } catch (error) {
-          this.logger.error(err);
-          throw err;
+          this.logger.error(error);
+          throw error;
         }
       }
     }

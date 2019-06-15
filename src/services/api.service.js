@@ -51,9 +51,7 @@ module.exports = {
         },
 
         async onBeforeCall(ctx, route, req, res) {
-          ctx.meta.userAgent = parser
-            .setUA(req.headers['user-agent'])
-            .getResult();
+          ctx.meta.userAgent = parser.setUA(req.headers['user-agent']).getResult();
         }
       }
     ]
